@@ -61,7 +61,7 @@ class GCMMessage(object):
             'Authorization': 'key=' + self.api_key}
 
         response = requests.post(
-            url="https://gcm-http.googleapis.com/gcm/send",
+            url=conf.GCM_API_ENDPOINT,
             data=values, headers=headers)
 
         response.raise_for_status()
