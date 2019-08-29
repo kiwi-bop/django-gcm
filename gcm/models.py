@@ -99,4 +99,4 @@ class AbstractDevice(models.Model):
 
 
 class Device(AbstractDevice):
-    pass
+    firebase_app = models.CharField(max_length=25, default='[DEFAULT]')
